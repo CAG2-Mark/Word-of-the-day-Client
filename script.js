@@ -20,6 +20,7 @@ function failedConnect(response) {
             throw Error(response.statusText);
         }
     }
+
     return response.text();
 }
 
@@ -46,8 +47,6 @@ function getData() {
         .then(failedConnect)
         .then(function (response) {
 
-
-
             if (response != null && response != "") {
                 loadData(response);
             } else {
@@ -58,20 +57,26 @@ function getData() {
                     getData();
                 } else {
 
-                    loadInObj("widgetArea");
-                    document.getElementById("widgetArea").style.height = "250px";
-
-                    var downtime = document.getElementById("downtime");
-                    downtime.style.display = "block";
-                    downtime.style.opacity = "1";
-                    document.getElementById("wordArea").style.display = "none";
-                    document.getElementById("downtimeText").innerHTML = "The widget is currently down for maintenance. Please check back later.";
+                    showError();
                 }
-                getDataLoop++;
             }
+        }).catch(function(error) {
+            showError();
         });
 }
 
+function showError() {
+    loadInObj("widgetArea");
+    document.getElementById("widgetArea").style.height = "250px";
+
+    var downtime = document.getElementById("downtime");
+    downtime.style.display = "block";
+    downtime.style.opacity = "1";
+    document.getElementById("wordArea").style.display = "none";
+    document.getElementById("downtimeText").innerHTML = "The widget is currently down for maintenance. Please check back later.";
+
+    loadInObj("hsscArea");
+}
 
 
 function isDownTime() {
@@ -182,11 +187,38 @@ function loadOutObj(id) {
 
 var infoArea = document.getElementById("infoArea");
 
+// get link
+
+var link = "https://raw.githubusercontent.com/CAG2-Mark/Word-of-the-day-Client/master/infoLink.txt";
+var defaultText = "DEFAULT";
+var infoLink = "";
+
+fetch(link, {mode: "cors"})
+.then(failedConnect)
+.then(function (response) {
+
+    if (response != null && response != "") {
+        infoLink = response;
+    } else {
+        infoLink = defaultText;
+    }
+
+}).catch(function(error) {
+    infoLink = defaultText;
+});
+
+
 function showInfo() {
     infoArea.style.display = "block";
     infoArea.style.height = getHeight() + "px";
 
-    loadInObj("infoArea");
+    if (infoLink == defaultText) {
+        loadInObj("infoArea");
+    }
+    else {
+        var win = window.open(infoLink, '_blank');
+        win.focus();
+    }
 }
 
 function hideInfo() {
