@@ -198,6 +198,9 @@ fetch(link, {mode: "cors"})
 .then(function (response) {
 
     if (response != null && response != "") {
+
+        alert(response);
+        
         infoLink = response;
     } else {
         infoLink = defaultText;
@@ -211,6 +214,8 @@ fetch(link, {mode: "cors"})
 function showInfo() {
     infoArea.style.display = "block";
     infoArea.style.height = getHeight() + "px";
+
+    alert(infoLink);
 
     if (infoLink == defaultText) {
         loadInObj("infoArea");
