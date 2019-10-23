@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Word of the day</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" type="text/css" href="styles/fonts.css">
+    <link rel="stylesheet" type="text/css" href="styles/colors.css">
+    <link rel="stylesheet" type="text/css" href="styles/widget.css">
+</head>
+
+<body>
+
+    <div id="infoArea">
+        <span id="padding">
+            <p>We are hssc</p>
+            <p>we promote humanities</p>
+            <p>and hot pants</p>
+            <p>our dictator also broke a potted plant</p>
+            
+            <span>
+                <button onclick="hideInfo()">OK</button>
+                <button>More information</button>
+            </span>
+            
+        </span>
+    </div>
+    <div id="widgetArea" class="opacityZero">
+
+        <!-- DOWNTIME SECTION -->
+
+        <div id="downtime">
+            <p id="downtimeText">To reduce bandwidth, the widget is currently in its daily downtime stage. Please check back at 7:00AM.</p>
+        </div>
+
+        <span id="wordArea">
+
+            <!-- title area section -->
+            <p class="wordText opacityZero" id="word">
+                Exuberant
+            </p>
+
+            <div class="wordInfo">
+
+                <!-- noun, adverb, verb etc -->
+                <span id="wordType" class="opacityZero">
+                    adjective
+                </span>
+
+                <!-- word type and pronounciation separator -->
+                <span class="dot opacityZero" id="separatorDot"></span>
+
+                <!-- pronounciation -->
+                <span id="pronounciation" class="opacityZero">
+                    /ɪɡˈz(j)uːb(ə)r(ə)nt/
+                </span>
+            </div>
+
+            <div class="separator opacityZero" id="middleSeparator"></div>
+
+            <p id="definition" class="opacityZero">Full of energy, excitement, and cheerfulness.</p>
+
+            <div id="bottom" class="opacityZero">
+                <button onclick="window.open('https://forms.gle/Z2YnLahM57wgnBG48', '_blank');">Rate this word</button>
+                <button onclick="window.open('https://forms.gle/JCEMpKqQox1eV4zh7', '_blank');">Submit a word</button>
+            </div>
+        </span>
+    </div>
+
+    <!-- TEMPORARY FOOTER -->
+    <div id="hsscArea" class="opacityZero">
+        <img src="logoTransparent.png" style="margin: 12px 12px 12px 0px; height:84px; float: left;">
+
+        <!-- margin top previously 14 -->
+        <div id="buttonArea" style="position: relative; float:left; margin-top:22px;">
+            <!--button class="linkStyle footerButton">Newsletter</button>
+            <button class="linkStyle footerButton">Activities</button-->
+            <a href="#" onclick="showInfo()">
+                <img src="banner.png" style="height: 64px"/>
+            </a>
+        </div>
+
+        <!--div style="position: relative; float:left; height:20px; margin-left:6px; margin-top:-6px">
+            <span style="height: 20px; font-size:16px; color:#555555; margin-top:2px;">©HSSC 2019</span>
+        </div-->
+    </div>
+
+
+    <!-- FINAL VERSION -->
+    <!--div id="hsscArea" class="opacityZero">
+        <img src="logoTransparent.png" style="margin: 4px; height:92px; float: left;">
+
+        <div id="buttonArea" style="position: relative; float:left; margin-top:14px;">
+            <button class="linkStyle footerButton">Newsletter</button>
+            <button class="linkStyle footerButton">Activities</button>
+        </div>
+        <div style="position: relative; float:left; height:20px; margin-left:6px; margin-top:-6px">
+            <span style="height: 20px; font-size:16px; color:#555555; margin-top:2px;">©HSSC 2019</span>
+        </div>
+    </div-->
+</body>
+
+
+<script src="script.js">
+
+</script>
+
+</html>

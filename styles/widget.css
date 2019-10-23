@@ -1,0 +1,149 @@
+html {
+
+    width: 360px;
+    
+    color: var(--textColor);
+    font-family: Playfair, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 0 0 0 0;
+}
+
+body {
+
+    width: 340px;
+    margin: 0;
+}
+
+.opacityZero {
+    opacity: 0 ;
+}
+
+/* top layer */
+
+.wordText {
+    font-weight: bold;
+    font-size: 48px;
+    margin: 0 0 0px 0;
+}
+
+/* GLOBAL STYLES */
+
+button {
+    margin: 10px 0 0 0;
+    transition: 200ms all ease;
+    background-color: #00000016;
+    border: 0;
+    color: var(--textColor);
+    font-family: Playfair, 'Times New Roman', Times, serif;
+    font-size:18px;
+    padding: 6px;
+    outline:none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accentColor);
+    color:white;
+}
+
+.linkStyle {
+    background-color: transparent;
+    text-decoration: underline;
+    color: #111111;
+}
+
+
+/* middle layer */
+
+#widgetArea {
+
+    position: relative;
+    padding: 8px 16px 8px 16px;
+    background: var(--bodyColor);
+    transition: 100ms all ease;
+}
+
+.wordInfo {
+    margin: 0 0 4px 2px; /* visual correction */
+    color: var(--textColorLight) !important; 
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    background-color: var(--textColorLight);
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+.separator {
+
+    margin: 12px 0px 4px 0;
+
+    background-color: var(--accentColor);
+    height: 5px;
+    width: 100%;
+}
+
+
+#bottom {
+    orientation: landscape;
+    margin: -4px 0 6px 0;
+}
+
+#definition {
+    text-align: justify;
+    margin: 12px 0 4px 0;
+    margin-top: 6px;
+}
+
+/* DOWNTIME SECTION */
+
+#downtime {
+    transition: opacity 200ms ease;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    opacity: 0;
+}
+
+/* HSSC AREA */
+
+#hsscArea {
+    height: 100px;
+    position: relative;
+    background: #0000000A;
+
+    padding: 0 8px 8px 16px;
+}
+
+.footerButton {
+    display:inline-block;
+    vertical-align: middle;
+}
+
+/* INFO AREA */
+
+#infoArea {
+    display: none;
+    opacity: 0;
+
+    position: absolute;
+    z-index: 1;
+
+    background: var(--bodyColor);
+    transition: 100ms all ease;
+
+    width: 340px;
+
+    margin-top: 0;
+}
+
+#padding {
+    margin: 8px 16px 8px 16px;
+    position: absolute;
+}
