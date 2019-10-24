@@ -3,7 +3,7 @@
 
 // NOTE - All in GMT!
 var downtimeHour = 15;
-var upTimeHour = 23;
+var upTimeHour = 22;
 var downtimeMinute = 0;
 var uptimeMinute = 0;
 
@@ -213,10 +213,13 @@ function showInfo() {
     
     if (infoLink.startsWith(defaultText)) {
 
-        infoArea.style.display = "block";
-        infoArea.style.height = getHeight() + "px";
+        //infoArea.style.display = "block";
+        //infoArea.style.height = getHeight() + "px";
 
-        loadInObj("infoArea");
+        //loadInObj("infoArea");
+
+        var win = window.open("https://drive.google.com/file/d/1J92aTAvtYRbyVlNZrvSUIckW2RI2rOUH/view", '_blank');
+        win.focus();
     }
     else {
         var win = window.open(infoLink, '_blank');
