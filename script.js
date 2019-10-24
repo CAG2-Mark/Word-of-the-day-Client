@@ -3,7 +3,7 @@
 
 // NOTE - All in GMT!
 var downtimeHour = 15;
-var upTimeHour = 22;
+var upTimeHour = 23;
 var downtimeMinute = 0;
 var uptimeMinute = 0;
 
